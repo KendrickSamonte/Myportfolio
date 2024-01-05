@@ -647,7 +647,7 @@ ion-icon {
     }
 
     .skills {
-        padding: 5rem;
+        padding: 2rem;
 
     }
 
@@ -710,12 +710,12 @@ ion-icon {
     }
 
     .motto {
-        top: -70rem;
+        top: -60rem;
     }
 
     #contact {
-        top: -60rem;
-        height: 100vh;
+        top: -50rem;
+        height: 120vh;
         overflow-y: hidden;
     }
     
