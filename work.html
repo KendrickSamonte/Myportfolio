@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="button" onclick="toggle()">menu</div>
+
+        <div class="menu">
+            <div class="button" onclick="togglec()">close</div>
+    
+            <ul class="ul">
+                <li class="li2 li"><a href="/index.html">home</a></li>
+                <div class="bg1 bg"></div>
+                <div class="bg2 bg"></div>
+                <div class="bg3 bg"></div>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li><a href="https://web.facebook.com/kendrick.samonte.5">facebook</a></li>
+                    <li ><a href="https://www.instagram.com/kendrick.samonte/">instagram</a></li>
+                    <li ><a href="https://www.linkedin.com/in/kendrick-samonte-205312295/">linkedin</a></li>
+                    <li ><a href="https://github.com/KendrickSamonte">github</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1><span>(work)</span>FOLIO</h1>
+        </div>
+
+    
+        <div class="thrill" >
+            <video  class="thrillVid" src="/videos/thrill website.mp4" playsinline width="600"></video>
+            <div class="text" >
+                <h1>THRILL WEBSITE</h1>
+                <p> "Thrilled to share my latest project, 'Thrill'—an e-commerce website crafted 
+                    from the ground up. As the sole front-end developer, I've poured my creativity and 
+                    technical expertise into designing an immersive online shopping experience. From sleek 
+                    interfaces to seamless navigation, Thrill is a testament to my commitment 
+                    to delivering top-notch, user-centric websites in the world of e-commerce."  </p>
+                <a href="https://thrill-clothing.vercel.app/">Live Website</a>
+            </div>  
+        </div>
+
+        <div class="iphone">
+            <div class="text">
+                <h1>iPHONE 15 LANDING PAGE</h1>
+                <p> I made an iPhone 15 landing page to showcase more the beauty of it. In order to achieve 
+                    this 
+                    I used html, css, javascript and gsap animation with a little bit parallax effect.  </p>
+                    <a href="https://page-wheat-six.vercel.app/">Live Website</a>
+            </div>
+            
+            <video  class="iphoneVid"src="/videos/iphone website.mp4" playsinline width="600"></video>
+        </div>
+
+        <div class="starbucks" >
+            <video class="starbucksVid" src="/videos/starbucks website.mp4" playsinline width="600"></video>
+            <div class="text">
+                <h1>STARBUCKS LANDING PAGE</h1>
+                <p>   "Proud to present my latest project—a Starbucks landing page featuring my unique design
+                    and captivating animations. As the sole creator, I've infused creativity into every pixel, 
+                    providing a visually stunning and dynamic experience. This project showcases my
+                    passion for web design and dedication to delivering engaging, one-of-a-kind digital environments."  </p>
+                    <a href="https://starbuckslanding-virid.vercel.app/">Live Website</a>
+
+            </div>
+        </div>
+
+        <div class="momon" >
+            <div class="text">
+                <h1 >MOMON WEBSITE</h1>
+                <p> I made a sample website for one of my favorite vlogger. It is a simple website that contains
+                    parallax effect where images have view perspectives and moves accordingto where your mouse points.
+                In order to achieve this, I used html, css, javascript and gsap  </p>
+                <a href="https://momoncakes.vercel.app/">Live Website</a>
+            </div>
+            <video class="momonVid" src="/videos/momon website.mp4"  playsinline width="600"></video>
+        </div>
+
+        <div class="nike">
+            <video  class="nikeVid" src="/videos/nike website.mp4" playsinline width="600"></video>
+            <div class="text">
+                <h1>NIKE WEBSITE CLONE</h1>
+                <p> 
+                    "Excited to share my latest project – a meticulously crafted clone of the Nike website,
+                     born out of admiration for its design prowess and functionality, 
+                    showcasing my passion for web development and user experience."  </p>
+                    <a href="">Live Website</a>
+
+            </div>
+        </div>
+
+        <div class="expense" >
+            <div class="text">
+                <h1>EXPENSE TRACKER</h1>
+                <p>
+                    "Proudly presenting my newly developed expense tracker website, a user-friendly tool designed to simplify budget management and enhance financial awareness."
+                    I created this website for my personal use so that I can track my personal expenses. It allows you
+                    to save the data in local storage and see what is going on with your finances. It is a great app
+                    for you not to lose track of your money  </p>
+                    <a href="https://expense-tracker-sigma-gilt.vercel.app/">Live Website</a>
+
+            </div>
+            <video class="expenseVid" src="/videos/expense tracker.mp4" playsinline width="600"></video>
+        </div>
+        
+        
+    </div>
+    <div class="cursor">
+    </div>
+
+
+        <script>
+            var tl = gsap.timeline({
+                paused: "true"
+            });
+            tl.to(".menu",{
+                duration: 1,
+                x: "0%",
+                ease: Expo.easeInOut
+            });
+            tl.fromTo(".li",{
+                y:"-100%",
+                opacity: 0
+            },{
+                duration: .5,
+                opacity: 1,
+                y: "0%",
+                stagger: 0.25
+            });
+            tl.fromTo(".social-li",{
+                y:"-50%",
+                opacity: 0
+            },{
+                duration:0.8,
+                opacity: 1,
+                stagger: 0.25,
+                ease: Expo.easeOut
+            },
+            "-=0.5");
+            
+            function toggle(){
+                tl.play();
+            }
+            function togglec(){
+                tl.reverse();
+            }
+    
+        </script>
+
+    <script>
+        let cursor = document.querySelector(".cursor");
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX +'px';
+            cursor.style.top = e.pageY +'px';
+        });
+    </script>
+    
+  
+    <script>
+        
+document.addEventListener("DOMContentLoaded", function () {
+    const thrill = document.querySelector(".thrill");
+    const video = thrill.querySelector(".thrillVid");
+
+    thrill.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    thrill.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const iphone = document.querySelector(".iphone");
+    const video = iphone.querySelector(".iphoneVid");
+
+    iphone.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    iphone.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const starbucks = document.querySelector(".starbucks");
+    const video = starbucks.querySelector(".starbucksVid");
+
+    starbucks.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    starbucks.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const momon = document.querySelector(".momon");
+    const video = momon.querySelector(".momonVid");
+
+    momon.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    momon.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const nike = document.querySelector(".nike");
+    const video = nike.querySelector(".nikeVid");
+
+    nike.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    nike.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const expense = document.querySelector(".expense");
+    const video = expense.querySelector(".expenseVid");
+
+    expense.addEventListener("mouseover", function () {
+      video.play();
+    });
+
+    expense.addEventListener("mouseout", function () {
+      video.pause();
+      video.currentTime = 0; 
+    });
+  });
+    </script>
+</body>
+</html>
